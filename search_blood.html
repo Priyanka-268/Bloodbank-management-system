@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Blood</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('https://t4.ftcdn.net/jpg/03/22/10/15/360_F_322101536_UaClSY3BDhLDWjgccwHmVPVT4ShY5riP.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-box {
+            background-color: rgba(255, 255, 255, 0.85); /* Light transparent background */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #d50000;
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff1744;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d50000;
+        }
+
+        @media screen and (max-width: 600px) {
+            .search-box {
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="search-box">
+        <h2>Search for Available Blood</h2>
+        <form action="#" method="GET">
+            <label for="blood-group">Select Blood Group:</label>
+            <select name="blood-group" id="blood-group" required>
+                <option value="">-- Choose Blood Group --</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+
+            <label for="location">Enter Location:</label>
+            <input type="text" id="location" name="location" placeholder="City or Hospital Name" required>
+
+            <button type="submit">Search Now</button>
+        </form>
+    </div>
+</body>
+</html>
